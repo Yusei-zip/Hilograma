@@ -102,7 +102,6 @@
             'asistencias.php' => 'Asistencia',
             'asistencia_rapida.php' => 'Carga',
             'historial.php' => 'Registros',
-            'prueba.php' => 'Test',
         ];
         foreach ($menu as $url => $label):
             ?>

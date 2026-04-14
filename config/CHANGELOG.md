@@ -53,7 +53,7 @@ v1.0.1 - Bug fixes:
             En el dashboard de empleados el desglose por subcargo queda eliminado, ahora solamente se motrará en la tabla.
 
 v.1.0.2 - Bug fixes:
-27/mar/2026 - 27/mar/2026
+27/mar/2026 - 
 
     Changed
         Ahora en el dashboard se discrimina si un personal esta en nomina o no, se deja bien en claro cuantos trabajan y están en nomina, a partir de ahora, se usarán solamente esos datos.
@@ -69,5 +69,3 @@ v.1.0.2 - Bug fixes:
                 Al momento de editar un registro desde el resumen, el dato no se guardaba y mucho menos se guardaba en base de datos, ahora lo hace correctamente
                 Al momento de editar un registro, 'Si es que un valor estaba como ausente, dejaba guardar sub estados' ahora esto funciona logicamente impidiendo esto //Revisar a futuro la funcion toggleSubEstado();
                 El boton de "Ojo" para ver las observaciones no funcionaba correctamente, ahora funciona correctamente.
-
-v.1.1.0 - New freatures

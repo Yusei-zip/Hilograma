@@ -34,7 +34,8 @@ if ($cargo_filtrado) {
 $empleados = $stmt_list->fetchAll(PDO::FETCH_ASSOC);
 
 if ($cargo_filtrado_act) {
-    $stmt_list_act = $pdo->prepare("c");
+    $stmt_list_act = $pdo->prepare("SELECT e.* , c.nombre_cargo AS nombre_cargo FROM empleados e INNER JOIN cargos c ON e.id_cargo = c.id 
+    WHERE e.id_Cargo = ?  AND e.is_active ='1' ORDER BY e.nombre_completo ASC;");
     $stmt_list_act->execute([$cargo_filtrado_act]);
 } else {
     $stmt_list_act = $pdo->query("SELECT e.*, c.nombre_cargo AS nombre_cargo FROM empleados e INNER JOIN cargos c ON e.id_cargo = c.id ORDER BY e.id_cargo ASC, e.nombre_completo ASC;");
