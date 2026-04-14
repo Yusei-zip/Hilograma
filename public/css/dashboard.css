@@ -1,0 +1,220 @@
+/* Contenedor de estadísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: var(--input-bg);
+    padding: 20px;
+    padding-left: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+a:hover {
+    transform: translateY(3px);
+}
+
+.stat-label {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    margin: 10px 0 0 0;
+    font-size: 2.5rem;
+}
+
+/* Barra de progreso */
+.progress-container {
+    margin-bottom: 35px;
+    width: 1050px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 12px;
+    background: var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--success);
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Botonera */
+.dashboard-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: var(--input-bg);
+    color: var(--text-main);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.nav-item svg {
+    width: 24px;
+    fill: currentColor;
+}
+
+.nav-item.primary {
+    background: var(--accent);
+    color: var(--btn-text);
+    border: none;
+}
+
+/* Sección de Logs */
+.log-section {
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
+    padding-top: 25px;
+}
+
+.log-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--error);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.log-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.log-item {
+    background: rgba(255, 82, 82, 0.05);
+    border-left: 3px solid var(--error);
+    padding: 12px 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.log-item:hover{
+    transform: translateY(-3px);
+transition: 0.2s;
+}
+.log-time {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-family: monospace;
+}
+
+.toast {
+    position: fixed; top: 20px; right: 20px; 
+    background: var(--bg-card); border: 1px solid var(--border);
+    padding: 15px 25px; border-radius: 8px; color: var(--text-main);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transform: translateX(120%); transition: all 0.3s ease; z-index: 99999;
+}
+.toast.show { transform: translateX(0); }
+.toast-success { border-left: 4px solid var(--success); }
+.toast-error { border-left: 4px solid var(--error); }
+
+.dashboard-footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 15px 30px;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+
+    width: 100%; 
+    box-sizing: border-box; 
+    margin: 40px 0 0 0;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    width: 100%; /* Que nunca sea mayor al padre */
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Punto de estado parpadeante */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.status-online { 
+    background-color: var(--success); 
+    box-shadow: 0 0 8px var(--success);
+    animation: pulse 2s infinite;
+}
+.status-offline { background-color: var(--error); }
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.version-tag {
+    background: var(--border);
+    color: var(--text-main);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+#footer-clock {
+    font-weight: bold;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums; /* Evita que los números "salten" */
+}
+
+.db-v {
+    font-size: 0.7rem;
+    opacity: 0.6;
+}

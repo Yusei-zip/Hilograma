@@ -1,0 +1,4 @@
+<FilesMatch "\.(php|inc|config)$">
+    ErrorDocument 403 /error403.php
+    Deny from all
+</FilesMatch

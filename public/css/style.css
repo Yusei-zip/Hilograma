@@ -1,0 +1,422 @@
+:root {
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --accent: #bb86fc;
+    --border: #333;
+    --input-bg: #2c2c2c;
+    --btn-primary: #bb86fc;
+    --btn-text: #000;
+    --success: #03dac6;
+    --error: #cf6679;
+}
+
+[data-theme="light"] {
+    --bg-body: #f8f9fa;
+    --bg-card: #ffffff;
+    --text-main: #212529;
+    --text-muted: #6c757d;
+    --accent: #6200ee;
+    --border: #dee2e6;
+    --input-bg: #fff;
+    --btn-primary: #6200ee;
+    --btn-text: #fff;
+    --success: #28a745;
+    --error: #dc3545;
+}
+
+[data-theme="purple"] {
+    --bg-body: #120024;
+    --bg-card: #1a0033;
+    --text-main: #f3e5f5;
+    --text-muted: #b39ddb;
+    --accent: #d500f9;
+    --border: #4a148c;
+    --input-bg: #210041;
+    --btn-primary: #7c4dff;
+    --btn-text: #ffffff;
+    --success: #00e676;
+    --error: #ff1744;
+}
+
+[data-theme="vintage"] {
+    --bg-body: #eee4d1;
+    --bg-card: #fdf6e3;
+    --text-main: #433422;
+    --text-muted: #8c7b64;
+    --accent: #b58900;
+    --border: #d3c6aa;
+    --input-bg: #fffcf5;
+    --btn-primary: #859900;
+    --btn-text: #fdf6e3;
+    --success: #719e07;
+    --error: #cb4b16;
+}
+
+[data-theme="cyberpunk"] {
+    --bg-body: #000000;
+    /* Negro total */
+    --bg-card: #111111;
+    /* Gris casi negro */
+    --text-main: #f3f3f3;
+    /* Blanco puro */
+    --text-muted: #777777;
+    /* Gris ceniza */
+    --accent: #fcee0a;
+    /* Amarillo Cyberpunk */
+    --border: #333333;
+    /* Borde técnico */
+    --input-bg: #000000;
+    --btn-primary: #fcee0a;
+    --btn-text: #000000;
+    /* Texto negro en botón amarillo */
+    --success: #00ff00;
+    --error: #ff003c;
+    /* Rojo neón */
+}
+
+[data-theme="strawberry"] {
+    --bg-body: #fff5f7;
+    /* Rosa blanquecino */
+    --bg-card: #ffffff;
+    /* Blanco puro */
+    --text-main: #4a3a3d;
+    /* Marrón rosado */
+    --text-muted: #b5a2a5;
+    /* Gris rosáceo */
+    --accent: #ff8fa3;
+    /* Rosa fresa */
+    --border: #ffe3e8;
+    /* Borde pastel */
+    --input-bg: #fffcfd;
+    --btn-primary: #ff758f;
+    --btn-text: #ffffff;
+    --success: #8ed6ad;
+    --error: #ff9b9b;
+}
+
+[data-theme="forest"] {
+    --bg-body: #0a0f0b;
+    /* Negro boscoso */
+    --bg-card: #141d16;
+    /* Verde oliva muy oscuro */
+    --text-main: #ecf3ee;
+    /* Menta pálido */
+    --text-muted: #6b8e73;
+    /* Verde salvia */
+    --accent: #2ecc71;
+    /* Esmeralda */
+    --border: #2d3a2f;
+    /* Borde pino */
+    --input-bg: #0d140e;
+    --btn-primary: #27ae60;
+    --btn-text: #ffffff;
+    --success: #2ecc71;
+    --error: #e74c3c;
+}
+
+[data-theme="ocean"] {
+    --bg-body: #0f172a;
+    /* Azul noche */
+    --bg-card: #1e293b;
+    /* Azul pizarra */
+    --text-main: #f1f5f9;
+    /* Blanco nieve */
+    --text-muted: #94a3b8;
+    /* Gris azulado */
+    --accent: #38bdf8;
+    /* Celeste brillante */
+    --border: #334155;
+    /* Borde oceánico */
+    --input-bg: #0f172a;
+    --btn-primary: #0ea5e9;
+    --btn-text: #ffffff;
+    --success: #22c55e;
+    --error: #ef4444;
+}
+
+[data-theme="espresso"] {
+    --bg-body: #1a1412;
+    /* Grano de café */
+    --bg-card: #2c2421;
+    /* Café con leche */
+    --text-main: #e6d5c1;
+    /* Crema */
+    --text-muted: #a68b7c;
+    /* Toffee */
+    --accent: #d4a373;
+    /* Canela */
+    --border: #3d322d;
+    /* Borde madera */
+    --input-bg: #1f1a18;
+    --btn-primary: #bc6c25;
+    --btn-text: #ffffff;
+    --success: #606c38;
+    --error: #ae2012;
+}
+
+
+[data-theme="pene"] {
+    --bg-body: #33302a;
+    --bg-card: #298e27;
+    --text-main: #184163;
+    --text-muted: #8c7b64;
+    --accent: #ff0000;
+    --border: #d3c6aa;
+    --input-bg: #fffcf5;
+    --btn-primary: #8400ff;
+    --btn-text: #fdf6e3;
+    --success: #f649ca;
+    --error: #0249ff;
+}
+
+
+
+
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.3s ease;
+}
+
+.db-offline-banner {
+    background: var(--error);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-weight: bold;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px var(--bg-card, 0, 0, 0, 0.4);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn-primary {
+    background: var(--btn-primary);
+    color: var(--btn-text);
+    width: 100%;
+}
+
+.btn-icon {
+    background: none;
+    color: var(--text-main);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.msg-alert {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.msg-green {
+    background: var(--success);
+    color: #000;
+}
+
+.msg-red {
+    background: var(--error);
+    color: #fff;
+}
+
+.msg-success {
+    background-color: rgba(0, 209, 178, 0.15);
+    color: #00d1b2;
+    /* Tu cyan favorito */
+    border-color: #00d1b2;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.page-link {
+    background: var(--input-bg);
+    color: var(--text-main);
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+}
+
+.page-link:hover:not(.disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(187, 134, 252, 0.1);
+}
+
+.page-link.active {
+    background: var(--accent);
+    color: var(--btn-text);
+    border-color: var(--accent);
+}
+
+.page-link.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.page-info {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.faltas-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.badge-faltas {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* El Pop-up oculto */
+.faltas-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 125%;
+    /* Aparece arriba del badge */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background: var(--input-bg);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+/* Triangulito inferior del pop-up */
+.faltas-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--border) transparent transparent transparent;
+}
+
+/* Mostrar al hacer Hover */
+.faltas-wrapper:hover .faltas-tooltip {
+    visibility: visible;
+    opacity: 1;
+    bottom: 140%;
+}
+
+.tooltip-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.mini-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.65rem;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+.mini-link:hover {
+    text-decoration: underline;
+}
+
+.tooltip-scroll {
+    max-height: 150px;
+    overflow-y: auto;
+}

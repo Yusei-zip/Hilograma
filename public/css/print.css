@@ -1,0 +1,37 @@
+@media print {
+    /* Ocultar botones, filtros y selector de tema al imprimir */
+    .btn, .btn-icon, form, .nav-bottom, #themeToggler {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        padding: 0;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    table {
+        border: 1px solid #000 !important;
+    }
+
+    th, td {
+        border-bottom: 1px solid #000 !important;
+        color: black !important;
+    }
+
+    /* Forzar que el PDF sea siempre modo claro */
+    [data-theme="dark"] {
+        --bg-body: #ffffff;
+        --text-main: #000000;
+        --border: #cccccc;
+    }
+}
